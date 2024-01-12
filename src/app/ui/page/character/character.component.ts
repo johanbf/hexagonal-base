@@ -1,7 +1,7 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {IDomainResponseCharacter} from "../../../domain/character/domain/character.model";
-import {CharacterUseCaseService} from "../../../domain/character/application/character-use-case.service";
 import {finalize} from "rxjs";
+import {CharacterUseCaseService} from "../../../models/character/application/useCase/character-use-case.service";
+import {IDomainResponseCharacter} from "../../../models/character/domain/character.model";
 
 @Component({
   selector: 'app-character',

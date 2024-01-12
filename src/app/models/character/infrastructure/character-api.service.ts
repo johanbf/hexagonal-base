@@ -1,4 +1,4 @@
-import {ICharacterApiService} from "./character-api.interface";
+import {ICharacterApiService} from "../application/interface/character-api.interface";
 import {inject, Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../../environment/environment";
