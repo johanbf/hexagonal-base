@@ -5,7 +5,7 @@ import {IDomainResponseCharacter} from "../../domain/character.model";
 
 @Injectable({providedIn: 'root'})
 export class CharacterUseCaseService {
-  constructor(private _characterApiService: ICharacterApiService) {}
+  constructor(@Inject('ICharacterApiService') private _characterApiService: ICharacterApiService) {}
 
   getCharacters() : Observable<IDomainResponseCharacter> {
     return this._characterApiService.getCharacter()
