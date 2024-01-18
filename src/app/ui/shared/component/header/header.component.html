@@ -1,0 +1,25 @@
+<div class="shadow-2">
+  <app-container>
+    <p-toolbar styleClass="bg-orange-500">
+      <ng-template pTemplate="start">
+<!--        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />-->
+        <h2 class="text-white font-medium text-3xl">Marca</h2>
+      </ng-template>
+      <ng-template pTemplate="center">
+        <ul class="flex flex-wrap align-items-center gap-3">
+          <li><a [routerLink]="'/'+rutas.product" class="text-white text-lg font-medium">Productos</a></li>
+          <li><a routerLink="/post" class="text-white text-lg font-medium">Posts</a></li>
+          <li><a routerLink="/users" class="text-white text-lg font-medium">Usuarios</a></li>
+        </ul>
+      </ng-template>
+      <ng-template pTemplate="end">
+        <div class="flex items-center gap-2"  (click)="menu.toggle($event)">
+          <p-avatar [image]="userAuth().image" shape="circle" />
+          <span class="font-bold text-white">{{ userAuth().firstName }} {{ userAuth().lastName }}</span>
+        </div>
+        <p-tieredMenu #menu [model]="items()" [popup]="true"></p-tieredMenu>
+
+      </ng-template>
+    </p-toolbar>
+  </app-container>
+</div>

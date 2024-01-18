@@ -1,0 +1,47 @@
+<div>
+
+  <form class="mt-5" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="grid-cols-4 grid gap-6">
+      <div class="">
+        <label class="">Titulo</label>
+        <app-input-custom formControlName="title"/>
+      </div>
+      <div class="">
+        <label class="">Descripción</label>
+        <app-input-custom formControlName="description"/>
+      </div>
+      <div class="">
+        <label class="">Precio</label>
+        <app-input-custom type="number" formControlName="price"/>
+      </div>
+      <div class="">
+        <label class="">Porcentaje de descuento</label>
+        <app-input-custom type="number" formControlName="discountPercentage"/>
+      </div>
+      <div class="">
+        <label class="">Rankin</label>
+        <app-input-custom type="number" formControlName="rating"/>
+      </div>
+      <div class="">
+        <label class="">Stock</label>
+        <app-input-custom type="number" formControlName="stock"/>
+      </div>
+      <div class="">
+        <label class="">Marca</label>
+        <app-input-custom formControlName="brand"/>
+      </div>
+      <div class="">
+        <label class="">Categoria</label>
+        <app-input-custom formControlName="category"/>
+      </div>
+      <div class="">
+        <label class="">Imagen</label>
+        <app-input-custom formControlName="thumbnail"/>
+      </div>
+    </div>
+    <div class="flex flex-wrap mt-3 justify-end ">
+      <button pButton class="px-3 py-3 bg-blue-500 text-white focus focus:shadow-none">Guardar</button>
+      <button type="button" (click)="cancelForm()" pButton class="px-3 py-3 bg-red-500 text-white focus focus:shadow-none ml-3">Cancelar</button>
+    </div>
+  </form>
+</div>

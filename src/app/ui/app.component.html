@@ -1,0 +1,12 @@
+@if(authLogin()) {
+  <app-header></app-header>
+  <div class="mt-6">
+    <app-container>
+      <router-outlet></router-outlet>
+    </app-container>
+  </div>
+} @else {
+  <router-outlet></router-outlet>
+}
+
+
